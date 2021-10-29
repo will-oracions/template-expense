@@ -1,0 +1,100 @@
+:root {
+  /*  Natives colors */
+
+  /* App Colors */
+  --primary-color: #000;
+  --primary-text-color: #fff;
+  --secondary-color: #eee;
+  --secondary-text-color: #555;
+
+  /* --primary-color: #fff;
+  --primary-text-color: #666;
+  --secondary-color: #999;
+  --secondary-text-color: #000;
+
+  --bg-color: #fff; */
+
+  /* Dimensions */
+  --window-max-width: 900px;
+  --header-height: 90px;
+  /* Fonts */
+  --SansSerif: sans-serif;
+  --transition-delay: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  font-family: var(--SansSerif);
+  font-size: 1.2rem;
+}
+
+#_app {
+  position: relative;
+  max-width: var(--window-max-width);
+  margin: auto;
+}
+
+#_app header.header {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  height: var(--header-height);
+  overflow: hidden;
+  padding-left: 0;
+  border-bottom: 1px solid var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+header.header .brand {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-text-color);
+  font-weight: bold;
+  color: var(--secondary-text-color);
+  padding: 0.3rem 1.3rem;
+}
+
+header.header .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header.header .menu .nav-menu {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  margin: 0 1rem;
+  font-size: 1.4rem;
+}
+
+header.header .menu .nav-menu li,
+header.header .menu .control-options li {
+  padding: 0 0.5rem;
+  cursor: pointer;
+  transition: transform var(--transition-delay);
+}
+
+header.header .menu .nav-menu li:hover,
+header.header .menu .control-options li:hover {
+  transform: scale(0.96);
+}
+
+header.header .menu .control-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+}
