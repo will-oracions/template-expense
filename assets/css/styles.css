@@ -2,20 +2,26 @@
   /*  Natives colors */
 
   /* App Colors */
-  --primary-color: #000;
+  /* --primary-color: #000;
   --primary-text-color: #fff;
   --secondary-color: #eee;
+  --secondary-text-color: #555; */
+
+  --primary-color: #e7e7e7;
+  --primary-text-color: #222;
+  --secondary-color: #007bff;
   --secondary-text-color: #555;
 
+  --bg-color: var(--primary-color);
   /* --primary-color: #fff;
   --primary-text-color: #666;
   --secondary-color: #999;
   --secondary-text-color: #000;
 
-  --bg-color: #fff; */
+  
 
   /* Dimensions */
-  --window-max-width: 900px;
+  --max-content-width: 900px;
   --header-height: 90px;
   /* Fonts */
   --SansSerif: sans-serif;
@@ -31,7 +37,7 @@
 }
 
 body {
-  background-color: var(--primary-color);
+  background-color: var(--bg-color);
   color: var(--primary-text-color);
   font-family: var(--SansSerif);
   font-size: 1.2rem;
@@ -44,7 +50,7 @@ body {
 }
 
 #_app header.header {
-  background-color: var(--bg-color);
+  background-color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,16 +64,20 @@ body {
 
 header.header .brand {
   background-color: var(--secondary-color);
-  border: 1px solid var(--primary-text-color);
+  border: 1px solid var(--primary-color);
   font-weight: bold;
-  color: var(--secondary-text-color);
+  color: var(--primary-color);
   padding: 0.3rem 1.3rem;
+  border-radius: 4px;
+  margin-left: 1rem;
 }
 
 header.header .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 header.header .menu .nav-menu {
@@ -75,9 +85,8 @@ header.header .menu .nav-menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-color);
+  background-color: var(--secondary-color);
   margin: 0 1rem;
-  font-size: 1.4rem;
 }
 
 header.header .menu .nav-menu li,
@@ -87,8 +96,28 @@ header.header .menu .control-options li {
   transition: transform var(--transition-delay);
 }
 
-header.header .menu .nav-menu li:hover,
-header.header .menu .control-options li:hover {
+header.header .menu .nav-menu li {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-right: 8px;
+  transition: background var(--transition-delay);
+  user-select: none;
+}
+
+header.header .menu .nav-menu li.active {
+  font-weight: bold;
+  background-color: #184677;
+}
+
+header.header .menu .nav-menu li:hover {
+  background-color: #103155;
+}
+
+header.header .menu .nav-menu li:active {
+  background-color: #184677;
+}
+
+header.header .menu .controls-options li:hover {
   transform: scale(0.96);
 }
 
@@ -97,4 +126,89 @@ header.header .menu .control-options {
   justify-content: space-between;
   align-items: center;
   margin: 0 1rem;
+}
+
+main {
+  max-width: var(--max-content-width);
+  margin: auto;
+}
+
+main .bilan {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  width: 100%;
+  padding-top: 2rem;
+  color: var(--primary-text-color);
+}
+
+main .bilan ._card {
+  background-color: #fff;
+  width: 48%;
+  max-width: 400px;
+  min-width: 250px;
+  min-height: 150px;
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  display: grid;
+
+  grid-template-areas:
+    "title count"
+    "expense count"
+    "amount count";
+}
+
+main .bilan ._card-title {
+  grid-area: title;
+}
+
+main .bilan ._card-amount {
+  grid-area: amount;
+}
+
+main .bilan ._card-expense {
+  grid-area: expense;
+}
+
+main .bilan ._card-count {
+  grid-area: count;
+  font-size: 10vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+main .bilan ._card-title {
+  font-size: 2rem;
+}
+
+main .bilan ._card-amount span:first-child {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+main .bilan ._card-amount span:last-child {
+  font-size: 1rem;
+  color: #9c9c9c;
+
+  position: relative;
+  top: -1.2rem;
+}
+
+main .tables-box {
+  background-color: #fff;
+  color: var(--primary-text-color);
+  margin: 0 2rem;
+}
+
+main .tables-box table h2,
+main .tables-box table thead {
+  background-color: #184677;
+  color: #fff;
 }
