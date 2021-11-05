@@ -6,13 +6,22 @@
   --primary-text-color: #fff;
   --secondary-color: #eee;
   --secondary-text-color: #555; */
+  --color-red: #fa6050;
+  --color-blue: #4853a1;
+  --color-gray: #fff0ea;
+  --color-dark-gray: #3f3f3f;
+  --color-light: #f8f9fd;
+  --color-light-gray: #eaeded;
+  --color-white: #fff;
 
   --primary-color: #e7e7e7;
   --primary-text-color: #333;
   --secondary-color: #007bff;
+  --secondary-color: var(--color-red);
   --secondary-text-color: #555;
+  --secondary-text-color: var(--color-dark-gray);
 
-  --bg-color: var(--primary-color);
+  --bg-color: var(--color-light);
   /* --primary-color: #fff;
   --primary-text-color: #666;
   --secondary-color: #999;
@@ -126,28 +135,28 @@ header.header .menu .control-options li {
 }
 
 header.header .menu .nav-menu li {
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1rem;
   border-radius: 4px;
   margin-right: 8px;
   transition: background var(--transition-delay);
-  user-select: none;
+  user-select: none; */
 }
 
 header.header .menu .nav-menu li.active {
-  font-weight: bold;
-  background-color: #184677;
+  /* font-weight: bold;
+  background-color: #184677; */
 }
 
-header.header .menu .nav-menu li:hover {
-  background-color: #103155;
+header.header .menu .nav-menu li:hover a {
+  /* background-color: #103155; */
 }
 
-header.header .menu .nav-menu li:active {
+header.header .menu .nav-menu li:active a {
   background-color: #184677;
 }
 
 header.header .menu .controls-options li:hover {
-  transform: scale(0.96);
+  /* transform: scale(0.96); */
 }
 
 header.header .menu .control-options {
@@ -165,6 +174,12 @@ main {
   padding: 0 var(--default-spacing);
 }
 
+main .bilan-title {
+  margin-top: 1rem;
+  position: relative;
+  top: 1rem;
+}
+
 main .bilan {
   background-color: var(--bg-color);
   display: flex;
@@ -176,6 +191,7 @@ main .bilan {
 }
 
 main .bilan ._card {
+  border: 1px solid var(--color-light);
   background-color: #fff;
   width: 48%;
   max-width: 300px;
@@ -183,7 +199,7 @@ main .bilan ._card {
   min-height: 150px;
   border-radius: 4px;
   padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   display: grid;
 
   grid-template-areas:
@@ -218,7 +234,7 @@ main .bilan ._card-count {
   background-color: #fff;
   line-height: 0.7;
   margin-left: 2rem;
-  color: #000;
+  color: var(--secondary-color);
 }
 
 main .bilan ._card-title {
@@ -247,17 +263,17 @@ main .tables-box {
 }
 
 #title {
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 #title,
 main .tables-box table .title,
 main .tables-box table thead {
-  background-color: #184677;
-  color: #fff;
+  background-color: var(--color-light-gray);
+  color: var(--secondary-text-color);
 }
 
 main .tables-box table {
-  color: #6d6a6a;
+  color: var(--secondary-text-color);
 }
 
 footer.footer {
