@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   /*  Natives colors */
 
@@ -7,6 +8,8 @@
   --secondary-color: #eee;
   --secondary-text-color: #555; */
   --color-red: #fa6050;
+  --color-red-active: #f04c3a;
+  --color-red-hover: #fa7c6e;
   --color-blue: #4853a1;
   --color-gray: #fff0ea;
   --color-dark-gray: #3f3f3f;
@@ -36,6 +39,7 @@
   /* Fonts */
   --SansSerif: sans-serif;
   --transition-delay: 0.3s;
+  --font-Inter: "Inter", sans-serif;
 }
 
 * {
@@ -44,12 +48,13 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  color: inherit;
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--primary-text-color);
-  font-family: var(--SansSerif);
+  font-family: var(--font-Inter);
   font-size: 1.2rem;
 }
 
@@ -108,6 +113,7 @@ header.header .brand {
   padding: 0.3rem 1.3rem;
   border-radius: 4px;
   margin-left: 1rem; */
+  text-transform: uppercase;
 }
 
 header.header .menu {
@@ -129,7 +135,8 @@ header.header .menu .nav-menu {
 
 header.header .menu .nav-menu li,
 header.header .menu .control-options li {
-  padding: 0 0.5rem;
+  /* padding: 0 0.5rem; */
+  margin-left: 0.5rem;
   cursor: pointer;
   transition: transform var(--transition-delay);
 }
@@ -147,13 +154,21 @@ header.header .menu .nav-menu li.active {
   background-color: #184677; */
 }
 
-header.header .menu .nav-menu li:hover a {
+header.header .menu .nav-menu li a {
   /* background-color: #103155; */
+  padding: 0.4rem 0.7rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
 }
 
-header.header .menu .nav-menu li:active a {
-  background-color: #184677;
+header.header .menu .nav-menu li:hover a {
+  /* background-color: #103155; */
+  background-color: var(--color-red-hover);
 }
+/* 
+header.header .menu .nav-menu li:active a {
+  background-color: var(--color-red-active);
+} */
 
 header.header .menu .controls-options li:hover {
   /* transform: scale(0.96); */
