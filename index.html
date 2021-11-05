@@ -10,198 +10,215 @@
     <div id="_app">
       <!-- Header -->
 
-      <header class="header">
-        <!-- Brand logo -->
-        <div class="brand">Logo</div>
-        <!-- Brand logo -->
-        <!-- Menu -->
-        <nav class="menu">
-          <!-- Nav Menu -->
-          <ul class="nav-menu">
-            <li class="active">Acceuil</li>
-            <li>Dépenses</li>
-            <li>Besoins</li>
-            <li>Aujourd'hui</li>
-          </ul>
-          <!-- Nav Menu -->
+      <div class="_section-container header">
+        <header class="header">
+          <!-- Brand logo -->
+          <div class="brand">Expenses</div>
+          <!-- Brand logo -->
+          <!-- Menu -->
+          <nav class="menu">
+            <!-- Nav Menu -->
+            <ul class="nav-menu">
+              <li class="active">
+                <a href="#">Acceuil</a>
+              </li>
+              <li class="active">
+                <a href="#">Dépenses</a>
+              </li>
+              <li class="active">
+                <a href="#">Besoins</a>
+              </li>
+              <li class="active">
+                <a href="#">Aujourd'hui</a>
+              </li>
+            </ul>
+            <!-- Nav Menu -->
 
-          <!-- Control Options -->
-          <ul class="control-options">
-            <li>Add</li>
-            <li>notifications</li>
-            <li>paramètres</li>
-          </ul>
-          <!-- Control Options -->
-        </nav>
-        <!-- Menu -->
-      </header>
+            <!-- Control Options -->
+            <ul class="control-options">
+              <li>Add</li>
+              <li>notifications</li>
+              <li>paramètres</li>
+            </ul>
+            <!-- Control Options -->
+          </nav>
+          <!-- Menu -->
+        </header>
+      </div>
+
       <!-- Header -->
 
       <!-- Main -->
-      <main>
-        <!-- Bilan -->
-        <div class="bilan">
-          <!-- Card -->
-          <div class="_card">
-            <h3 class="_card-title">Dépenses</h3>
-            <!-- Card Select -->
-            <select name="expense">
-              <option value="mounth">Mensuelles</option>
-              <option value="day">Jounalières</option>
-              <option value="year">Annuelles</option>
-            </select>
-            <!-- Card Select -->
+      <div class="_section-container main">
+        <main>
+          <!-- Bilan -->
+          <div class="bilan">
+            <!-- Card -->
+            <div class="_card">
+              <h3 class="_card-title">Dépenses</h3>
+              <!-- Card Select -->
+              <select name="expense">
+                <option value="mounth">Mensuelles</option>
+                <option value="day">Jounalières</option>
+                <option value="year">Annuelles</option>
+              </select>
+              <!-- Card Select -->
 
-            <!-- Card amount -->
-            <div class="_card-amount">
-              <span>5,050</span>
-              <span>XFA</span>
+              <!-- Card amount -->
+              <div class="_card-amount">
+                <span>5,050</span>
+                <span>XFA</span>
+              </div>
+              <!-- Card amount -->
+
+              <div class="_card-count"><span>55</span></div>
             </div>
-            <!-- Card amount -->
+            <!-- Card -->
+            <!-- Card -->
+            <div class="_card">
+              <h3 class="_card-title">Besoins</h3>
+              <!-- Card Select -->
+              <select name="expense">
+                <option value="mounth">Mensuelles</option>
+                <option value="day">Jounalières</option>
+                <option value="year">Annuelles</option>
+              </select>
+              <!-- Card Select -->
 
-            <div class="_card-count"><span>55</span></div>
-          </div>
-          <!-- Card -->
-          <!-- Card -->
-          <div class="_card">
-            <h3 class="_card-title">Besoins</h3>
-            <!-- Card Select -->
-            <select name="expense">
-              <option value="mounth">Mensuelles</option>
-              <option value="day">Jounalières</option>
-              <option value="year">Annuelles</option>
-            </select>
-            <!-- Card Select -->
+              <!-- Card amount -->
+              <div class="_card-amount">
+                <span>53,475</span>
+                <span>XFA</span>
+              </div>
+              <!-- Card amount -->
 
-            <!-- Card amount -->
-            <div class="_card-amount">
-              <span>53,475</span>
-              <span>XFA</span>
+              <div class="_card-count">07</div>
             </div>
-            <!-- Card amount -->
-
-            <div class="_card-count">07</div>
+            <!-- Card -->
           </div>
-          <!-- Card -->
-        </div>
-        <!-- Bilan -->
+          <!-- Bilan -->
 
-        <!-- Besoins Journaliers -->
-        <div class="tables-box">
-          <table>
-            <h2>Besoins à satifaire aujourd'hui</h2>
-            <thead>
-              <tr>
-                <th>Nom</th>
-                <th>Description</th>
-                <th>Date</th>
-                <th>Montant (XAF)</th>
-                <th>Status</th>
-              </tr>
-
-              <!-- <tr>Priorité</tr> -->
-            </thead>
-            <tbody>
-              <tr>
-                <td>Passport</td>
-                <td>
-                  Passport express dans les deux prochains mois pour mener à
-                  bien un projet crutiale ( dans huits mois)
-                </td>
-                <td>12 oct 2021</td>
-                <td>200,000</td>
-                <td>Actif</td>
-              </tr>
-
-              <tr>
-                <td>Laptop de travail</td>
-                <td>
-                  Machine performante, core i5 ou core i7 avec minimum 8 Go de
-                  ram et 1 To de Disque dure.
-                </td>
-                <td>01 Jan 2022</td>
-                <td>150,000</td>
-                <td>Actif</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- Besoins Journaliers -->
-
-        <!-- Expenses & Besoin table recap-->
-        <div>
+          <!-- Besoins Journaliers -->
           <div class="tables-box">
             <table>
-              <h2>Dernières dépenses</h2>
+              <h2 id="title">Besoins de la journée</h2>
               <thead>
                 <tr>
                   <th>Nom</th>
                   <th>Description</th>
-                  <th>Montant(XAF)</th>
+                  <th>Date</th>
+                  <th>Montant (XAF)</th>
+                  <th>Status</th>
                 </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Afficheur Tecno Camom 12</td>
-                  <td>Réparation de l'afficheur en pane de mon smartphone</td>
-                  <td>20 sep 2021</td>
-                  <td>20,000</td>
-                </tr>
-                <tr>
-                  <td>Coque HP 2000</td>
-                  <td>Réparation de la coque endomagé de mon laptop</td>
-                  <td>25 sep 2021</td>
-                  <td>20,000</td>
-                </tr>
-                <tr>
-                  <td>Nouvelle chemise</td>
-                  <td>Chemise présentable pour passer un entretien</td>
-                  <td>1 sep 2021</td>
-                  <td>2,500</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
 
-          <div class="tables-box">
-            <table>
-              <h2>Derniers Besoins</h2>
-              <thead>
-                <tr>
-                  <th>Nom</th>
-                  <th>Description</th>
-                  <th>Montant(XAF)</th>
-                </tr>
+                <!-- <tr>Priorité</tr> -->
               </thead>
               <tbody>
                 <tr>
-                  <td>Afficheur Tecno Camom 12</td>
-                  <td>Réparation de l'afficheur en pane de mon smartphone</td>
-                  <td>20 sep 2021</td>
-                  <td>20,000</td>
+                  <td>Passport</td>
+                  <td>
+                    Passport express dans les deux prochains mois pour mener à
+                    bien un projet crutiale ( dans huits mois)
+                  </td>
+                  <td>12 oct 2021</td>
+                  <td>200,000</td>
+                  <td>Actif</td>
                 </tr>
+
                 <tr>
-                  <td>Coque HP 2000</td>
-                  <td>Réparation de la coque endomagé de mon laptop</td>
-                  <td>25 sep 2021</td>
-                  <td>20,000</td>
-                </tr>
-                <tr>
-                  <td>Nouvelle chemise</td>
-                  <td>Chemise présentable pour passer un entretien</td>
-                  <td>1 sep 2021</td>
-                  <td>2,500</td>
+                  <td>Laptop de travail</td>
+                  <td>
+                    Machine performante, core i5 ou core i7 avec minimum 8 Go de
+                    ram et 1 To de Disque dure.
+                  </td>
+                  <td>01 Jan 2022</td>
+                  <td>150,000</td>
+                  <td>Actif</td>
                 </tr>
               </tbody>
             </table>
           </div>
-        </div>
-        <!-- Expenses & Besoin table recap-->
-      </main>
+          <!-- Besoins Journaliers -->
+
+          <!-- Expenses & Besoin table recap-->
+          <div>
+            <div class="tables-box">
+              <table>
+                <h2>Dernières dépenses</h2>
+                <thead>
+                  <tr>
+                    <th>Nom</th>
+                    <th>Description</th>
+                    <th>Montant(XAF)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Afficheur Tecno Camom 12</td>
+                    <td>Réparation de l'afficheur en pane de mon smartphone</td>
+                    <td>20 sep 2021</td>
+                    <td>20,000</td>
+                  </tr>
+                  <tr>
+                    <td>Coque HP 2000</td>
+                    <td>Réparation de la coque endomagé de mon laptop</td>
+                    <td>25 sep 2021</td>
+                    <td>20,000</td>
+                  </tr>
+                  <tr>
+                    <td>Nouvelle chemise</td>
+                    <td>Chemise présentable pour passer un entretien</td>
+                    <td>1 sep 2021</td>
+                    <td>2,500</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="tables-box">
+              <table>
+                <h2>Derniers Besoins</h2>
+                <thead>
+                  <tr>
+                    <th>Nom</th>
+                    <th>Description</th>
+                    <th>Montant(XAF)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Afficheur Tecno Camom 12</td>
+                    <td>Réparation de l'afficheur en pane de mon smartphone</td>
+                    <td>20 sep 2021</td>
+                    <td>20,000</td>
+                  </tr>
+                  <tr>
+                    <td>Coque HP 2000</td>
+                    <td>Réparation de la coque endomagé de mon laptop</td>
+                    <td>25 sep 2021</td>
+                    <td>20,000</td>
+                  </tr>
+                  <tr>
+                    <td>Nouvelle chemise</td>
+                    <td>Chemise présentable pour passer un entretien</td>
+                    <td>1 sep 2021</td>
+                    <td>2,500</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- Expenses & Besoin table recap-->
+        </main>
+      </div>
+
       <!-- Main -->
-      <footer class="footer">
-        Open Source project - Build by will-oracions
-      </footer>
+
+      <div class="_section-container footer">
+        <footer class="footer">
+          Open Source project - Build by will-oracions
+        </footer>
+      </div>
     </div>
   </body>
 </html>
