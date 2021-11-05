@@ -22,6 +22,7 @@
 
   /* Dimensions */
   --max-content-width: 1260px;
+  --default-spacing: 2rem;
   --header-height: 50px;
   /* Fonts */
   --SansSerif: sans-serif;
@@ -74,6 +75,7 @@ body {
 }
 
 header.header {
+  width: 100%;
   max-width: var(--max-content-width);
   background-color: var(--secondary-color);
   display: flex;
@@ -85,6 +87,7 @@ header.header {
   padding-left: 0;
   border-bottom: 1px solid var(--secondary-color);
   margin: 0 auto;
+  padding: 0 var(--default-spacing);
   /* margin-bottom: 1rem; */
 }
 
@@ -155,9 +158,11 @@ header.header .menu .control-options {
 }
 
 main {
+  width: 100%;
   max-width: var(--max-content-width);
   margin: 0 auto;
   overflow: hidden;
+  padding: 0 var(--default-spacing);
 }
 
 main .bilan {
@@ -173,8 +178,8 @@ main .bilan {
 main .bilan ._card {
   background-color: #fff;
   width: 48%;
-  max-width: 500px;
-  min-width: 250px;
+  max-width: 300px;
+  min-width: fit-content;
   min-height: 150px;
   border-radius: 4px;
   padding: 1rem;
@@ -188,7 +193,7 @@ main .bilan ._card {
 }
 
 main .bilan ._card:first-child {
-  margin-left: 5rem;
+  margin-right: 1rem;
 }
 
 main .bilan ._card-title {
@@ -205,12 +210,14 @@ main .bilan ._card-expense {
 
 main .bilan ._card-count {
   grid-area: count;
-  font-size: 10vw;
+  font-size: 9vw;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
   font-weight: bold;
   background-color: #fff;
+  line-height: 0.7;
+  margin-left: 2rem;
   color: #000;
 }
 
@@ -254,6 +261,8 @@ main .tables-box table {
 }
 
 footer.footer {
+  width: 100%;
   max-width: var(--max-content-width);
   margin: 0 auto;
+  padding: 0 var(--default-spacing);
 }
