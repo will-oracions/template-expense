@@ -141,13 +141,13 @@ header.header .menu .control-options li {
   transition: transform var(--transition-delay);
 }
 
-header.header .menu .nav-menu li {
+/* header.header .menu .nav-menu li {
 
 }
 
 header.header .menu .nav-menu li.active {
 
-}
+} */
 
 header.header .menu .nav-menu li a {
   /* background-color: #103155; */
@@ -165,9 +165,9 @@ header.header .menu .nav-menu li:active a {
   background-color: var(--color-red-active);
 } */
 
-header.header .menu .controls-options li:hover {
-  /* transform: scale(0.96); */
-}
+/* header.header .menu .controls-options li:hover { */
+/* transform: scale(0.96); */
+/* } */
 
 header.header .menu .control-options {
   display: flex;
