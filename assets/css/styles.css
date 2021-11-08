@@ -142,16 +142,11 @@ header.header .menu .control-options li {
 }
 
 header.header .menu .nav-menu li {
-  /* padding: 0.5rem 1rem;
-  border-radius: 4px;
-  margin-right: 8px;
-  transition: background var(--transition-delay);
-  user-select: none; */
+
 }
 
 header.header .menu .nav-menu li.active {
-  /* font-weight: bold;
-  background-color: #184677; */
+
 }
 
 header.header .menu .nav-menu li a {
