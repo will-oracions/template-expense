@@ -51,6 +51,28 @@
   color: inherit;
 }
 
+._button {
+  width: 100px;
+  background-color: var(--color-dark-gray);
+  color: var(--color-light-gray);
+  padding: 0.2rem 1rem;
+  font-size: 1.3rem;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+._button:hover {
+  opacity: 0.9;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+._button.primary {
+  background-color: var(--color-red);
+  color: white;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--primary-text-color);
@@ -273,6 +295,10 @@ main .tables-box {
   overflow-x: auto;
 }
 
+main .tables-box:not(main .tables-box:last-child) {
+  margin-right: 0.5rem;
+}
+
 /* #title {
   padding: 0.5rem 1rem;
 } */
@@ -294,6 +320,7 @@ main .tables-box table {
 main .tables-box table {
   /* border: none !important; */
   border-collapse: collapse;
+  border: 1px solid var(--color-light-gray);
 }
 
 main .tables-box table td:not(main .tables-box table td:first-child) {
@@ -323,14 +350,16 @@ main .tables-box tr:hover {
   background-color: var(--color-light-gray);
 }
 
-main .tables-box h2 {
+main .tables-box .top {
   background-color: var(--color-light-gray);
   border-bottom: 1px solid white;
   padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-main div:last-child {
-  background: yellow;
+main .data-previous {
   display: flex;
 }
 
