@@ -270,6 +270,7 @@ main .tables-box {
   background-color: #fff;
   color: var(--primary-text-color);
   margin: 2rem 0;
+  overflow-x: auto;
 }
 
 /* #title {
@@ -283,7 +284,10 @@ main .tables-box table thead {
 }
 
 main .tables-box table {
+  width: 100%;
   color: var(--secondary-text-color);
+  /* min-width: 200px; */
+  overflow-x: hidden;
   /* background-color: red; */
 }
 
@@ -302,6 +306,11 @@ main .tables-box table tr:not(main .tables-box table tr:last-child) {
 
 main .tables-box th {
   padding: 10px 0;
+  border-bottom: 1px solid white;
+}
+
+main .tables-box th:not(main .tables-box th:first-child) {
+  border-left: 1px solid white;
 }
 
 main .tables-box td {
@@ -318,6 +327,11 @@ main .tables-box h2 {
   background-color: var(--color-light-gray);
   border-bottom: 1px solid white;
   padding: 0.5rem 1rem;
+}
+
+main div:last-child {
+  background: yellow;
+  display: flex;
 }
 
 footer.footer {
