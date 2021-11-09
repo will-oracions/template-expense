@@ -52,7 +52,9 @@
 }
 
 ._button {
-  width: 100px;
+  display: inline-block;
+  text-align: center;
+  /* width: 100px; */
   background-color: var(--color-dark-gray);
   color: var(--color-light-gray);
   padding: 0.2rem 1rem;
@@ -71,6 +73,11 @@
 ._button.primary {
   background-color: var(--color-red);
   color: white;
+}
+
+._button.small {
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
 }
 
 body {
@@ -166,10 +173,15 @@ header.header .menu .control-options li {
 /* header.header .menu .nav-menu li {
 
 }
+*/
 
-header.header .menu .nav-menu li.active {
+header.header .menu .nav-menu li.active a {
+  background-color: var(--color-red-hover);
+}
 
-} */
+header.header .menu .nav-menu li.active:hover a {
+  background-color: var(--color-red-hover);
+}
 
 header.header .menu .nav-menu li a {
   /* background-color: #103155; */
