@@ -272,10 +272,10 @@ main .tables-box {
   margin: 2rem 0;
 }
 
-#title {
+/* #title {
   padding: 0.5rem 1rem;
-}
-#title,
+} */
+/* #title, */
 main .tables-box table .title,
 main .tables-box table thead {
   background-color: var(--color-light-gray);
@@ -284,6 +284,40 @@ main .tables-box table thead {
 
 main .tables-box table {
   color: var(--secondary-text-color);
+  /* background-color: red; */
+}
+
+main .tables-box table {
+  /* border: none !important; */
+  border-collapse: collapse;
+}
+
+main .tables-box table td:not(main .tables-box table td:first-child) {
+  border-left: 1px solid var(--color-light-gray);
+}
+
+main .tables-box table tr:not(main .tables-box table tr:last-child) {
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+main .tables-box th {
+  padding: 10px 0;
+}
+
+main .tables-box td {
+  min-width: 150px;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+main .tables-box tr:hover {
+  background-color: var(--color-light-gray);
+}
+
+main .tables-box h2 {
+  background-color: var(--color-light-gray);
+  border-bottom: 1px solid white;
+  padding: 0.5rem 1rem;
 }
 
 footer.footer {
@@ -291,4 +325,7 @@ footer.footer {
   max-width: var(--max-content-width);
   margin: 0 auto;
   padding: 0 var(--default-spacing);
+}
+
+@media only screen and (max-width: 900px) {
 }
