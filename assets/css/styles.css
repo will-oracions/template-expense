@@ -51,6 +51,10 @@
   color: inherit;
 }
 
+._text-primary {
+  color: var(--color-red);
+}
+
 ._button {
   display: inline-block;
   text-align: center;
@@ -106,6 +110,7 @@
   border: none;
   background-color: var(--color-light-gray);
   outline: none;
+  border: 1px solid var(--color-light-gray);
 }
 
 ._form-group input:focus,
@@ -120,6 +125,27 @@
 
 ._form-group textarea::placeholder {
   font-size: 1rem;
+}
+
+._list {
+  max-width: 600px;
+  position: relative;
+  width: 100%;
+  background-color: var(--color-light-gray);
+  padding: 0;
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+  font-size: 1rem;
+  color: rgb(155, 155, 155);
+  margin-top: 2rem;
+}
+
+._list-item {
+  /* margin: 1rem 0; */
+
+  /* padding: 0.5rem; */
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 form {
@@ -430,6 +456,10 @@ footer.footer {
   max-width: var(--max-content-width);
   margin: 0 auto;
   padding: 0 var(--default-spacing);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 2rem;
 }
 
 #add {
@@ -443,6 +473,31 @@ footer.footer {
 }
 
 #add div:last-child ._form-group button {
+  float: right;
+}
+
+.notification-card {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.notification-card:hover {
+  background-color: var(--color-light);
+}
+
+.notification-card .notification-title {
+  color: var(--color-dark-gray);
+  font-weight: bold;
+}
+
+.notification-card .notification-description {
+  padding: 0.4rem 0;
+  color: var(--color-dark-gray);
+}
+
+.notification-card .notification-date {
+  position: relative;
+  top: -1rem;
   float: right;
 }
 
